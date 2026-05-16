@@ -23,7 +23,7 @@
 - [x] §12 — Champion + F1 threshold on validation
 - [x] §13 — Locked test evaluation
 - [x] §14 — Calibration plots
-- [ ] §15 — Regression (**teammate**)
+- [x] §15 — Regression (**teammate**)
 - [ ] §16 — Permutation + SHAP (**teammate**)
 - [ ] §17 — Temporal drift (**teammate**)
 
@@ -72,7 +72,8 @@
 - [ ] Compare val PR-AUC before vs after enrichment
 
 ### Phase 9 — Teammate sections
-- [ ] §15, §16, §17 (see notebook stubs)
+- [x] §15 regression
+- [ ] §16, §17 (see notebook stubs)
 
 ### Phase 10 — Narrative
 - [ ] Update abstract to match joins + lag rules

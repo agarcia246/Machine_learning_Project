@@ -88,7 +88,7 @@ All folders use yearly CSVs (roughly **2016–2026**). Loaded via `read_concat(f
 | §12 Threshold | Done | Champion by val **PR-AUC**; **F1-optimal** `t_star` on val |
 | §13 Test clf | Done | Locked test metrics + confusion matrices |
 | §14 Calibration | Done | Reliability curves (val + test) |
-| §15 Regression | **Teammate stub** | `pass` + TODO |
+| §15 Regression | Done | Regresses `delay_per_dep` with temporal validation, RMSE/MAE/R², and observed-vs-predicted diagnostics |
 | §16 Interpretation | **Teammate stub** | Permutation + SHAP TODO |
 | §17 Drift | **Teammate stub** | Val vs test / era slices TODO |
 | Appendix | Reference | Optional stretch list |
