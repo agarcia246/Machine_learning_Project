@@ -1,14 +1,18 @@
 # European Flight Delays — ML Foundations Final Project
+**Team:** Alejandro Zapata, Alex Garcia, Andrés Befeler, Javier Cruz, Jose Miguel Reyes, Nicolás González
 
 Predict **high ATC pre-departure delay days** and **delay intensity** at European airports using [EUROCONTROL](https://www.eurocontrol.int/) open operational data.
 
 
-| **Main deliverable** | `[flight_delays.ipynb](flight_delays.ipynb)`                                                             |
-| -------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Repository**       | [github.com/agarcia246/Machine_learning_Project](https://github.com/agarcia246/Machine_learning_Project) |
+## Relevant links
+
+| Resource                 | Link                                                                                                     |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| **Main deliverable**     | [`flight_delays.ipynb`](flight_delays.ipynb)                                                             |
+| **Repository**           | [github.com/agarcia246/Machine_learning_Project](https://github.com/agarcia246/Machine_learning_Project) |
+| **Final presentation**   | [canva.link/sjb55tzyitd1f6v](https://canva.link/sjb55tzyitd1f6v)                                         |
 
 
-**Team:** Alejandro Zapata, Alex Garcia, Andres Befeler, Javier Cruz, Jose Miguel Reyes, Nicolas Gonzalez
 
 ---
 
@@ -161,20 +165,36 @@ Machine_learning_Project/
 
 ## Setup & run
 
+You'll need **Python 3.10+** and **git** installed.
+
+### macOS / Linux
+
 ```bash
+git clone https://github.com/agarcia246/Machine_learning_Project.git
 cd Machine_learning_Project
-python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-jupyter lab flight_delays.ipynb
 ```
 
-**macOS + LightGBM:** if `import lightgbm` fails with `libomp.dylib`, run `brew install libomp`. The notebook wraps LightGBM in `try/except` so the pipeline still runs without it.
+### Running the notebook
 
-**Run all cells** top-to-bottom after pulling changes. Full execution takes several minutes (tree models on ~1M+ panel rows). Keep 16 interpretation subsampled if runtime is an issue.
+Open `flight_delays.ipynb` in VS Code, select the `.venv` as the kernel, and click **Run All** to execute the notebook top to bottom. The notebook is meant to be executed in order, as out-of-order execution can break the temporal-split logic. Full execution takes several minutes.
+
+> **macOS + LightGBM:** if `import lightgbm` fails with a `libomp.dylib` error, run `brew install libomp`. The notebook wraps LightGBM in `try/except`, so the pipeline still runs without it.
 
 ---
 
+## Group contributions
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Andrés Béfeler** | Exploratory data analysis (EDA)<br>Classification target<br>Preprocessing pipelines |
+| **Jose Miguel Reyes** | Panel construction and QA<br>Class imbalance handling notes and distribution interpretation<br>Missing values narrative and EDA write-ups<br>Slides: Modelling, testing, and performance |
+| **Alex García** | Regression target definition<br>Regression baseline models and diagnostics<br>Feature selection and leakage audit |
+| **Alejandro Zapata** | Research on data sources<br>Pipeline fixes<br>Early data loading<br>Slides: All topics after the intro and before modelling |
+| **Javier Cruz** | Optional LightGBM handling<br>Pipeline fixes<br>Path A scaffold |
+| **Nicolás Gonzales** | README rewrite and submission polish<br>Slides: Intro and conclusion<br>Baseline model training sweep |
 
 ## References
 
